@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Stylist Prototype</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Page 1: Intro -->
+  <div id="page1" class="page active">
+    <header>
+      <h1>FashionIA</h1>
+      <p>Aplikasi berbasis AI yang membantu kamu mix & match outfit dari lemari pribadimu.</p>
+    </header>
+    <main class="center-box">
+      <p>Ini adalah versi prototype sederhana untuk menguji pengalaman user dalam mencoba stylist digital.</p>
+      <button class="btn" onclick="goToPage('page2')">Coba Sekarang</button>
+    </main>
+  </div>
+
+  <!-- Page 2: Demo -->
+  <div id="page2" class="page hidden">
+    <header>
+      <h2>Pilih atasan favoritmu</h2>
+      <p>AI akan rekomendasiin outfit lengkap buat kamu ✨</p>
+    </header>
+    <main>
+      <section class="items">
+        <div class="item" onclick="recommend('kaos hitam')">
+          <img src="assets/img/kaos_hitam.jpg" alt="Kaos Hitam">
+          <p>Kaos Hitam</p>
+        </div>
+        <div class="item" onclick="recommend('kemeja putih')">
+          <img src="assets/img/kemeja_putih.jpg" alt="Kemeja Putih">
+          <p>Kemeja Putih</p>
+        </div>
+        <div class="item" onclick="recommend('sweater abu-abu')">
+          <img src="assets/img/sweater_abu.jpg" alt="Sweater Abu-abu">
+          <p>Sweater Abu-abu</p>
+        </div>
+        <div class="item" onclick="recommend('kemeja denim biru')">
+          <img src="assets/img/kemeja_denim.jpg" alt="Kemeja Denim Biru">
+          <p>Kemeja Denim Biru</p>
+        </div>
+      </section>
+      <!-- Loading -->
+      <div id="loading" class="hidden loading-box">
+        <div class="spinner"></div>
+        <p class="loading-text">AI sedang mencari kombinasi terbaik...</p>
+      </div>
+      <!-- Result -->
+      <section id="result" class="outfit hidden"></section>
+    </main>
+  </div>
+
+  <!-- Page 3: Outro -->
+  <div id="page3" class="page hidden">
+    <header>
+      <h2>Terima kasih sudah mencoba</h2>
+    </header>
+    <main class="center-box">
+      <p>Versi ini masih prototype sederhana.<br>
+         Kami sangat butuh feedback kamu untuk mengembangkan apps ini lebih jauh</p>
+      <a href="https://forms.gle/form-link" target="_blank" class="btn">Isi Survei</a>
+    </main>
+  </div>
+
+  <footer>
+    <small>© 2025 Fashion Stylist Prototype</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
